@@ -1,0 +1,29 @@
+body {
+    background-color: #eef6ee;
+    font-family: Georgia, serif;
+    color: #222;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #1b4332;
+}
+
+.box {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+a {
+    color: #2d6a4f;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

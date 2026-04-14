@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Golf Club Selector</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="scratch.html">Scratch Page</a>
+        <a href="app.html">Golf Club Selector</a>
+    </nav>
+    <title>Golf Club Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .app-box {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #1b4332;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-box">
+        <h1>Golf Club Selector</h1>
+        <p>Enter your yardage and get a suggested club.</p>
+
+        <input type="number" id="yardage" placeholder="Enter yards">
+        <button onclick="pickClub()">Find My Club</button>
+
+        <p id="result"></p>
+
+        <a href="scratch.html">Back to Scratch Page</a>
+    </div>
+
+    <script>
+        function pickClub() {
+            let yards = document.getElementById("yardage").value;
+            let result = "";
+
+            if (yards >= 230) {
+                result = "Suggested club: Driver";
+            } else if (yards >= 210) {
+                result = "Suggested club: 3 Wood";
+            } else if (yards >= 190) {
+                result = "Suggested club: 5 Iron";
+            } else if (yards >= 170) {
+                result = "Suggested club: 7 Iron";
+            } else if (yards >= 150) {
+                result = "Suggested club: 8 Iron";
+            } else if (yards >= 130) {
+                result = "Suggested club: 9 Iron";
+            } else if (yards >= 110) {
+                result = "Suggested club: Pitching Wedge";
+            } else {
+                result = "Suggested club: Wedge";
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>
